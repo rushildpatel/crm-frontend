@@ -54,11 +54,14 @@ export const Entry = () => {
     setformLoad(formType);
   };
 
+  //entry-page bg-info
   return (
     <div>
-      <div className="jumbotron form-box">
-        {formLoad === "login" && <LoginForm handleOnChange={handleOnChange} handleOnSubmit={handleOnSubmit} formSwitcher={formSwitcher} email={email} pass={password} />}
-        {formLoad === "reset" && <ResetPassword handleOnChange={handleOnChange} handleOnResetSubmit={handleOnResetSubmit} formSwitcher={formSwitcher} email={email} />}
+      <div className="entry-page bg-info">
+        <div className="jumbotron form-box">
+          {formLoad === "login" && <LoginForm handleOnChange={handleOnChange} handleOnSubmit={handleOnSubmit} formSwitcher={formSwitcher} email={email} pass={password} />}
+          {formLoad === "reset" && <ResetPassword handleOnChange={handleOnChange} handleOnResetSubmit={handleOnResetSubmit} formSwitcher={formSwitcher} email={email} />}
+        </div>
       </div>
     </div>
   );
